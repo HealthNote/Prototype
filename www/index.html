@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Health Note</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="shortcut icon" href="img/app-icon.png" type="image/png">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  </head>
+  <body onload="init()">
+  <!-- Header-->
+    <div id="page_header">
+      <span id="app_logo">Health Note</span>
+      <div id="icon_panel">
+        <img src="img/add-icon.png" alt="" id="add_icon" class="header_icon icon">
+        <img src="img/gear-icon.png" alt="" id="gear_icon" class="header_icon icon">
+      </div>
+    </div>
+    <!-- Content -->
+    <div id="page_content"></div>
+    <!-- Scripts -->
+    <div id="all_scripts">
+      <!-- Phonegap API -->
+      <script type="text/javascript" src="cordova.js"></script>
+      <!-- Init -->
+      <script type="text/javascript" src="scripts/init.js"></script>
+      <script type="text/javascript" src="scripts/complete_db.js"></script>
+      <script type="text/javascript" src="scripts/history.js"></script>
+      <script type="text/javascript" src="scripts/neural.js"></script>
+      <!-- Temlates -->
+      <script type="text/javascript" src="templates/main_page.js"></script>
+      <script type="text/javascript" src="templates/sys_info_page.js"></script>
+      <script type="text/javascript" src="templates/settings_page.js"></script>
+      <script type="text/javascript" src="templates/add_note_page.js"></script>
+      <script type="text/javascript" src="templates/note_view_page.js"></script>
+      <!-- Data -->
+      <script src="json/text.json"></script>
+      <script src="json/symptoms.json"></script>
+      <script src="json/doctors.json"></script>
+      <script src="json/neural/disease.json"></script>
+      <script src="json/neural/model.json"></script>
+
+    </div>
+  </body>
+</html>

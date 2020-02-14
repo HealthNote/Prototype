@@ -1,0 +1,1913 @@
+const en_symptoms = {
+    'head_and_neck': {
+        'value': 'Head and neck',
+        'parts': {
+            'head': {
+                'value': 'Head',
+                'symptoms': {
+                    'headache': {
+                        'value': 'Headache',
+                        'doctor': 'neurologist'
+                    },
+                    'dizziness': {
+                        'value': 'Dizziness',
+                        'doctor': 'therapist'
+                    },
+                    'noise_in_head': {
+                        'value': 'Noise in head',
+                        'doctor': 'neurologist'
+                    }
+                }
+            },
+            'face': {
+                'value': 'Face',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'neurologist'
+                    },
+                    'numbness': {
+                        'value': 'Numbness',
+                        'doctor': 'neurologist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'therapist'
+                    },
+                    'itch': {
+                        'value': 'Itch',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'mouth': {
+                'value': 'Mouth',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'dentist'
+                    },
+                    'cough': {
+                        'value': 'Cough',
+                        'doctor': 'therapist'
+                    },
+                    'speech_disorder': {
+                        'value': 'Speech disorder',
+                        'doctor': 'neurologist'
+                    },
+                    'halitosis': {
+                        'value': 'Halitosis',
+                        'doctor': 'dentist'
+                    },
+                    'burning': {
+                        'value': 'Burning',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'therapist'
+                    },
+                    'change_in_taste': {
+                        'value': 'Change in taste',
+                        'doctor': 'dentist'
+                    },
+                    'bitter_taste_in_the_mouth': {
+                        'value': 'Bitter taste in the mouth',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'dryness_and_tingling_lips': {
+                        'value': 'Dryness and tingling lips',
+                        'doctor': 'dentist'
+                    },
+                    'mucous_sputum': {
+                        'value': 'Mucous sputum',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'rusty_sputum': {
+                        'value': 'Rusty sputum',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'blood_in_sputum': {
+                        'value': 'Blood in sputum',
+                        'doctor': 'otolaryngologist'
+                    }
+                }
+            },
+            'tongue': {
+                'value': 'Tongue',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'dentist'
+                    },
+                    'burning': {
+                        'value': 'Burning',
+                        'doctor': 'dentist'
+                    },
+                    'ulcers': {
+                        'value': 'Ulcers',
+                        'doctor': 'dentist'
+                    }
+                }
+            },
+            'gums': {
+                'value': 'Gums',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'dentist'
+                    },
+                    'blood': {
+                        'value': 'Blood',
+                        'doctor': 'dentist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'dentist'
+                    }
+                }
+            },
+            'teeth': {
+                'value': 'Teeth',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'dentist'
+                    },
+                    'hypersensitivity': {
+                        'value': 'Hypersensitivity',
+                        'doctor': 'dentist'
+                    }
+                }
+            },
+            'eyes': {
+                'value': 'Eyes',
+                'symptoms': {
+                    'visual_impairment': {
+                        'value': 'Visual impairment',
+                        'doctor': 'ophthalmologist'
+                    },
+                    'hallucinations': {
+                        'value': 'Hallucinations',
+                        'doctor': 'neurologist'
+                    },
+                    'pus': {
+                        'value': 'Pus',
+                        'doctor': 'ophthalmologist'
+                    },
+                    'itch': {
+                        'value': 'Itch',
+                        'doctor': 'ophthalmologist'
+                    },
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'ophthalmologist'
+                    },
+                    'watering_from_eyes': {
+                        'value': 'Watering from eyes',
+                        'doctor': 'ophthalmologist'
+                    },
+                    'redness': {
+                        'value': 'Redness',
+                        'doctor': 'ophthalmologist'
+                    }
+                }
+            },
+            'ears': {
+                'value': 'Ears',
+                'symptoms': {
+                    'hearing_impairment': {
+                        'value': 'Hearing impairment',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'pus': {
+                        'value': 'Pus',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'itch': {
+                        'value': 'Itch',
+                        'doctor': 'dermatologist'
+                    },
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'otolaryngologist'
+                    }
+                }
+            },
+            'nose': {
+                'value': 'Nose',
+                'symptoms': {
+                    'rhinitis': {
+                        'value': 'Rhinitis',
+                        'doctor': 'therapist'
+                    },
+                    'blood': {
+                        'value': 'Blood',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'nasal_congestion': {
+                        'value': 'Nasal congestion',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'reduced_sense_of_smell': {
+                        'value': 'Reduced sense of smell',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'itch': {
+                        'value': 'Itch',
+                        'doctor': 'dermatologist'
+                    },
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'pus': {
+                        'value': 'Pus',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'red_sore_around_nose': {
+                        'value': 'Red sore around nose',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'neck': {
+                'value': 'Neck',
+                'symptoms': {
+                    'weakness_in_neck_muscles': {
+                        'value': 'Weakness in neck muscles',
+                        'doctor': 'neurologist'
+                    },
+                    'lymph_node_enlargement': {
+                        'value': 'Lymph node enlargement',
+                        'doctor': 'therapist'
+                    },
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'neurologist'
+                    }
+                }
+            },
+            'throat': {
+                'value': 'Throat',
+                'symptoms': {
+                    'nausea': {
+                        'value': 'Nausea',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'cough': {
+                        'value': 'Cough',
+                        'doctor': 'therapist'
+                    },
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'therapist'
+                    },
+                    'asthma': {
+                        'value': 'Asthma',
+                        'doctor': 'therapist'
+                    },
+                    'dry_throat': {
+                        'value': 'Dry throat',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'continuous_sneezing': {
+                        'value': 'Continuous sneezing',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'patches': {
+                        'value': 'Patches',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'irritation': {
+                        'value': 'Irritation',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'phlegm': {
+                        'value': 'Phlegm',
+                        'doctor': 'otolaryngologist'
+                    }
+                }
+            }
+        }
+    },
+    'body': {
+        'value': 'Body',
+        'parts': {
+            'chest': {
+                'value': 'Chest',
+                'symptoms': {
+                    'nausea': {
+                        'value': 'Nausea',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'difficulty_breathing': {
+                        'value': 'Difficulty breathing',
+                        'doctor': 'therapist'
+                    },
+                    'cough': {
+                        'value': 'Cough',
+                        'doctor': 'therapist'
+                    },
+                    'chest_pain': {
+                        'value': 'Chest pain',
+                        'doctor': 'therapist'
+                    },
+                    'heart_problems': {
+                        'value': 'Heart problems',
+                        'doctor': 'therapist'
+                    }
+                }
+            },
+            'spine': {
+                'value': 'Spine',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'orthopedist'
+                    },
+                    'limitation_of_mobility': {
+                        'value': 'Limitation of mobility',
+                        'doctor': 'orthopedist'
+                    }
+                }
+            },
+            'stomach': {
+                'value': 'Stomach',
+                'symptoms': {
+                    'stomach_pain': {
+                        'value': 'Stomach pain',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'abdominal_pain': {
+                        'value': 'Abdominal pain',
+                        'doctor': 'therapist'
+                    },
+                    'belly_pain': {
+                        'value': 'Belly pain',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'diarrhea': {
+                        'value': 'Diarrhea',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'nausea': {
+                        'value': 'Nausea',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'hernia': {
+                        'value': 'Hernia',
+                        'doctor': 'therapist'
+                    },
+                    'muscle_spasm': {
+                        'value': 'Muscle spasm',
+                        'doctor': 'therapist'
+                    },
+                    'lower_abdominal_pain': {
+                        'value': 'Lower abdominal pain',
+                        'doctor': 'therapist'
+                    },
+                    'cramp': {
+                        'value': 'Cramp',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'swelling': {
+                        'value': 'Swelling',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'acidity': {
+                        'value': 'Acidity',
+                        'doctor': 'gastroenterologist'
+                    }
+                }
+            },
+            'groin': {
+                'value': 'Groin',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'urogynecologist'
+                    },
+                    'problems_with_urination': {
+                        'value': 'Problems with urination',
+                        'doctor': 'urogynecologist'
+                    },
+                    'itch': {
+                        'value': 'Itch',
+                        'doctor': 'dermatologist'
+                    },
+                    'burning': {
+                        'value': 'Burning',
+                        'doctor': 'urogynecologist'
+                    },
+                    'problem_with_sexual_organs': {
+                        'value': 'Problem with sexual organs',
+                        'doctor': 'urogynecologist'
+                    },
+                    'bladder_discomfort': {
+                        'value': 'Bladder discomfort',
+                        'doctor': 'urogynecologist'
+                    },
+                    'unpleasant_smell_of_urine': {
+                        'value': 'Unpleasant smell of urine',
+                        'doctor': 'urogynecologist'
+                    },
+                    'continuous_sensation_of_urine': {
+                        'value': 'Continuous sensation of urine',
+                        'doctor': 'urogynecologist'
+                    }
+                }
+            }
+        }
+    },
+    'arms': {
+        'value': 'Arms',
+        'parts': {
+            'whole_arm': {
+                'value': 'Whole arm',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'traumatologist'
+                    },
+                    'muscular_weakness': {
+                        'value': 'Muscular weakness',
+                        'doctor': 'endocrinologist'
+                    },
+                    'numbness': {
+                        'value': 'Numbness',
+                        'doctor': 'therapist'
+                    },
+                    'shake': {
+                        'value': 'Shake',
+                        'doctor': 'psychiatrist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'therapist'
+                    }
+                }
+            },
+            'shoulder': {
+                'value': 'Shoulder',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'traumatologist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'therapist'
+                    },
+                    'limited_mobility': {
+                        'value': 'Limited mobility',
+                        'doctor': 'orthopedist'
+                    }
+                }
+            },
+            'cubit': {
+                'value': 'Cubit',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'traumatologist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'therapist'
+                    },
+                    'limited_mobility': {
+                        'value': 'Limited mobility',
+                        'doctor': 'orthopedist'
+                    }
+                }
+            },
+            'forearm': {
+                'value': 'Forearm',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'traumatologist'
+                    },
+                    'numbness': {
+                        'value': 'Numbness',
+                        'doctor': 'therapist'
+                    },
+                    'muscle_stiffness': {
+                        'value': 'Muscle stiffness',
+                        'doctor': 'orthopedist'
+                    },
+                    'convulsions': {
+                        'value': 'Convulsions',
+                        'doctor': 'therapist'
+                    }
+                }
+            },
+            'hand': {
+                'value': 'Hand',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'traumatologist'
+                    },
+                    'numbness': {
+                        'value': 'Numbness',
+                        'doctor': 'therapist'
+                    },
+                    'shake': {
+                        'value': 'Shake',
+                        'doctor': 'psychiatrist'
+                    },
+                    'burning': {
+                        'value': 'Burning',
+                        'doctor': 'traumatologist'
+                    },
+                    'limited_mobility': {
+                        'value': 'Limited mobility',
+                        'doctor': 'orthopedist'
+                    },
+                    'brittleness_of_nails': {
+                        'value': 'Brittleness of nails',
+                        'doctor': 'dermatologist'
+                    },
+                    'inflammatory_nails': {
+                        'value': 'Inflammatory nails',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            }
+        }
+    },
+    'legs': {
+        'value': 'Legs',
+        'parts': {
+            'whole_leg': {
+                'value': 'Whole leg',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'traumatologist'
+                    },
+                    'muscular_weakness': {
+                        'value': 'Muscular weakness',
+                        'doctor': 'endocrinologist'
+                    },
+                    'gait_disturbance': {
+                        'value': 'Gait disturbance',
+                        'doctor': 'orthopedist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'therapist'
+                    },
+                    'numbness': {
+                        'value': 'Numbness',
+                        'doctor': 'therapist'
+                    },
+                    'itch': {
+                        'value': 'Itch',
+                        'doctor': 'dermatologist'
+                    },
+                    'shake': {
+                        'value': 'Shake',
+                        'doctor': 'psychiatrist'
+                    },
+                    'painful_walking': {
+                        'value': 'Painful walking',
+                        'doctor': 'orthopedist'
+                    }
+                }
+            },
+            'hips': {
+                'value': 'Hips',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'traumatologist'
+                    },
+                    'numbness': {
+                        'value': 'Numbness',
+                        'doctor': 'therapist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'therapist'
+                    },
+                    'redness': {
+                        'value': 'Redness',
+                        'doctor': 'dermatologist'
+                    },
+                    'limited_mobility': {
+                        'value': 'Limited mobility',
+                        'doctor': 'orthopedist'
+                    }
+                }
+            },
+            'knees': {
+                'value': 'Knees',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'traumatologist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'therapist'
+                    },
+                    'limited_mobility': {
+                        'value': 'Limited mobility',
+                        'doctor': 'orthopedist'
+                    },
+                    'crunch': {
+                        'value': 'Crunch',
+                        'doctor': 'orthopedist'
+                    },
+                    'redness': {
+                        'value': 'Redness',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'shins': {
+                'value': 'Shins',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'orthopedist'
+                    },
+                    'burning': {
+                        'value': 'Burning',
+                        'doctor': 'dermatologist'
+                    },
+                    'numbness': {
+                        'value': 'Numbness',
+                        'doctor': 'therapist'
+                    }
+                }
+            },
+            'ankle': {
+                'value': 'Ankle',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'traumatologist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'therapist'
+                    },
+                    'crunch': {
+                        'value': 'Crunch',
+                        'doctor': 'orthopedist'
+                    },
+                    'redness': {
+                        'value': 'Redness',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'feet': {
+                'value': 'Feet',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'traumatologist'
+                    },
+                    'edema': {
+                        'value': 'Edema',
+                        'doctor': 'therapist'
+                    },
+                    'numbness': {
+                        'value': 'Numbness',
+                        'doctor': 'therapist'
+                    },
+                    'itch': {
+                        'value': 'Itch',
+                        'doctor': 'dermatologist'
+                    },
+                    'burning': {
+                        'value': 'Burning',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            }
+        }
+    },
+    'other': {
+        'value': 'Other',
+        'parts': {
+            'skin': {
+                'value': 'Skin',
+                'symptoms': {
+                    'skin_problem': {
+                        'value': 'Skin Problem',
+                        'doctor': 'dermatologist'
+                    },
+                    'increased_perspiration': {
+                        'value': 'Increased perspiration',
+                        'doctor': 'dermatologist'
+                    },
+                    'itch': {
+                        'value': 'Itch',
+                        'doctor': 'dermatologist'
+                    },
+                    'puffiness': {
+                        'value': 'Puffiness',
+                        'doctor': 'dermatologist'
+                    },
+                    'hypersensitivity': {
+                        'value': 'Hypersensitivity',
+                        'doctor': 'dermatologist'
+                    },
+                    'pain': {
+                        'value': 'Pain',
+                        'doctor': 'dermatologist'
+                    },
+                    'blister': {
+                        'value': 'Blister',
+                        'doctor': 'dermatologist'
+                    },
+                    'rash': {
+                        'value': 'Rash',
+                        'doctor': 'dermatologist'
+                    },
+                    'nodular_lesions': {
+                        'value': 'Nodular lesions',
+                        'doctor': 'dermatologist'
+                    },
+                    'bruises': {
+                        'value': 'Bruises',
+                        'doctor': 'dermatologist'
+                    },
+                    'red_spots': {
+                        'value': 'Red spots all over the body',
+                        'doctor': 'dermatologist'
+                    },
+                    'inflamed_nails': {
+                        'value': 'Inflamed nails',
+                        'doctor': 'dermatologist'
+                    },
+                    'skin_peeling': {
+                        'value': 'Skin peeling',
+                        'doctor': 'dermatologist'
+                    },
+                    'acne': {
+                        'value': 'Acne',
+                        'doctor': 'dermatologist'
+                    },
+                    'purulent_pimples': {
+                        'value': 'Purulent pimples',
+                        'doctor': 'dermatologist'
+                    },
+                    'yellowish_skin': {
+                        'value': 'Yellowish skin',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'hair': {
+                'value': 'Hair',
+                'symptoms': {
+                    'hair_loss': {
+                        'value': 'Hair loss',
+                        'doctor': 'dermatologist'
+                    },
+                    'eyebrow_alopecia': {
+                        'value': 'Eyebrow alopecia',
+                        'doctor': 'dermatologist'
+                    },
+                    'gluing_eyelashes': {
+                        'value': 'Gluing eyelashes',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'general_state': {
+                'value': 'General state',
+                'symptoms': {
+                    'nausea': {
+                        'value': 'Nausea',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'vomiting': {
+                        'value': 'Vomiting',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'difficulty_breathing': {
+                        'value': 'Difficulty breathing',
+                        'doctor': 'therapist'
+                    },
+                    'cough': {
+                        'value': 'Cough',
+                        'doctor': 'therapist'
+                    },
+                    'sleep_disorder': {
+                        'value': 'Sleep disorder',
+                        'doctor': 'neurologist'
+                    },
+                    'diarrhea': {
+                        'value': 'Diarrhea',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'constipation': {
+                        'value': 'Constipation',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'faint': {
+                        'value': 'Faint',
+                        'doctor': 'neurologist'
+                    },
+                    'elevated_temperature': {
+                        'value': 'Elevated temperature',
+                        'doctor': 'therapist'
+                    },
+                    'weakness': {
+                        'value': 'Weakness',
+                        'doctor': 'therapist'
+                    },
+                    'weight_gain': {
+                        'value': 'Weight gain',
+                        'doctor': 'nutritionist'
+                    },
+                    'weight_loss': {
+                        'value': 'Weight loss',
+                        'doctor': 'nutritionist'
+                    },
+                    'pressure': {
+                        'value': 'Pressure',
+                        'doctor': 'therapist'
+                    },
+                    'continuous_sneezing': {
+                        'value': 'Continuous sneezing',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'obesity': {
+                        'value': 'Obesity',
+                        'doctor': 'nutritionist'
+                    },
+                    'excessive_hunger': {
+                        'value': 'Excessive hunger',
+                        'doctor': 'nutritionist'
+                    },
+                    'muscle_stiffness': {
+                        'value': 'Muscle stiffness',
+                        'doctor': 'traumatologist'
+                    },
+                    'loss_of_balance': {
+                        'value': 'Loss of balance',
+                        'doctor': 'orthopedist'
+                    },
+                    'instability': {
+                        'value': 'Instability',
+                        'doctor': 'orthopedist'
+                    },
+                    'internal_itching': {
+                        'value': 'Internal itching',
+                        'doctor': 'neurologist'
+                    },
+                    'depression': {
+                        'value': 'Depression',
+                        'doctor': 'psychotherapist'
+                    },
+                    'irritability': {
+                        'value': 'Irritability',
+                        'doctor': 'psychotherapist'
+                    },
+                    'mood_swings': {
+                        'value': 'Mood swings',
+                        'doctor': 'psychotherapist'
+                    },
+                    'restlessness': {
+                        'value': 'Restlessness',
+                        'doctor': 'psychotherapist'
+                    },
+                    'lethargy': {
+                        'value': 'Lethargy',
+                        'doctor': 'therapist'
+                    },
+                    'pain_in_muscles': {
+                        'value': 'Pain in muscles',
+                        'doctor': 'orthopedist'
+                    },
+                    'increased_appetite': {
+                        'value': 'Increased appetite',
+                        'doctor': 'nutritionist'
+                    },
+                    'loss_of_appetite': {
+                        'value': 'Loss of appetite',
+                        'doctor': 'nutritionist'
+                    },
+                    'lack_of_concentration': {
+                        'value': 'Lack of concentration',
+                        'doctor': 'neurologist'
+                    },
+                    'heart_palpitation': {
+                        'value': 'Heart palpitation',
+                        'doctor': 'therapist'
+                    },
+                    'chills': {
+                        'value': 'Chills',
+                        'doctor': 'therapist'
+                    },
+                    'muscle_wasting': {
+                        'value': 'Muscle wasting',
+                        'doctor': 'orthopedist'
+                    },
+                    'fatigue': {
+                        'value': 'Fatigue',
+                        'doctor': 'therapist'
+                    },
+                    'anxiety': {
+                        'value': 'Anxiety',
+                        'doctor': 'psychotherapist'
+                    },
+                    'cold_limbs': {
+                        'value': 'Сold limbs',
+                        'doctor': 'endocrinologist'
+                    },
+                    'breathlessness': {
+                        'value': 'Breathlessness',
+                        'doctor': 'therapist'
+                    },
+                    'dehydration': {
+                        'value': 'Dehydration',
+                        'doctor': 'endocrinologist'
+                    },
+                    'malaise': {
+                        'value': 'Malaise',
+                        'doctor': 'therapist'
+                    },
+                    'mild_fever': {
+                        'value': 'Mild fever',
+                        'doctor': 'therapist'
+                    }
+                }
+            }
+        }
+    }
+}
+
+const ru_symptoms = {
+    'head_and_neck': {
+        'value': 'Голова и шея',
+        'parts': {
+            'head': {
+                'value': 'Голова',
+                'symptoms': {
+                    'headache': {
+                        'value': 'Головная боль',
+                        'doctor': 'neurologist'
+                    },
+                    'dizziness': {
+                        'value': 'Головокружение',
+                        'doctor': 'therapist'
+                    },
+                    'noise_in_head': {
+                        'value': 'Шум в голове',
+                        'doctor': 'neurologist'
+                    }
+                }
+            },
+            'face': {
+                'value': 'Лицо',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'neurologist'
+                    },
+                    'numbness': {
+                        'value': 'Онемение',
+                        'doctor': 'neurologist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'therapist'
+                    },
+                    'itch': {
+                        'value': 'Зуд',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'mouth': {
+                'value': 'Рот',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'dentist'
+                    },
+                    'cough': {
+                        'value': 'Кашель',
+                        'doctor': 'therapist'
+                    },
+                    'speech_disorder': {
+                        'value': 'Нарушение речи',
+                        'doctor': 'neurologist'
+                    },
+                    'halitosis': {
+                        'value': 'Запах изо рта',
+                        'doctor': 'dentist'
+                    },
+                    'burning': {
+                        'value': 'Жжение',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'therapist'
+                    },
+                    'change_in_taste': {
+                        'value': 'Изменение вкусовых ощущений',
+                        'doctor': 'dentist'
+                    },
+                    'bitter_taste_in_the_mouth': {
+                        'value': 'Горечь во рту',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'dryness_and_tingling_lips': {
+                        'value': 'Сухость и покалывание в губах',
+                        'doctor': 'dentist'
+                    },
+                    'mucous_sputum': {
+                        'value': 'Слизистая мокрота',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'rusty_sputum': {
+                        'value': 'Ржавая мокрота',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'blood_in_sputum': {
+                        'value': 'Кровь в мокроте',
+                        'doctor': 'otolaryngologist'
+                    }
+                }
+            },
+            'tongue': {
+                'value': 'Язык',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'dentist'
+                    },
+                    'burning': {
+                        'value': 'Жжение',
+                        'doctor': 'dentist'
+                    },
+                    'ulcers': {
+                        'value': 'Язвы',
+                        'doctor': 'dentist'
+                    }
+                }
+            },
+            'gums': {
+                'value': 'Десны',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'dentist'
+                    },
+                    'blood': {
+                        'value': 'Кровь',
+                        'doctor': 'dentist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'dentist'
+                    }
+                }
+            },
+            'teeth': {
+                'value': 'Зубы',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'dentist'
+                    },
+                    'hypersensitivity': {
+                        'value': 'Повышенная чувствительность',
+                        'doctor': 'dentist'
+                    }
+                }
+            },
+            'eyes': {
+                'value': 'Глаза',
+                'symptoms': {
+                    'visual_impairment': {
+                        'value': 'Нарушение зрения',
+                        'doctor': 'ophthalmologist'
+                    },
+                    'hallucinations': {
+                        'value': 'Галлюцинации',
+                        'doctor': 'neurologist'
+                    },
+                    'pus': {
+                        'value': 'Гной',
+                        'doctor': 'ophthalmologist'
+                    },
+                    'itch': {
+                        'value': 'Зуд',
+                        'doctor': 'ophthalmologist'
+                    },
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'ophthalmologist'
+                    },
+                    'watering_from_eyes': {
+                        'value': 'Слезы из глаз',
+                        'doctor': 'ophthalmologist'
+                    },
+                    'redness': {
+                        'value': 'Покраснение',
+                        'doctor': 'ophthalmologist'
+                    }
+                }
+            },
+            'ears': {
+                'value': 'Уши',
+                'symptoms': {
+                    'hearing_impairment': {
+                        'value': 'Нарушение слуха',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'pus': {
+                        'value': 'Гной',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'itch': {
+                        'value': 'Зуд',
+                        'doctor': 'dermatologist'
+                    },
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'otolaryngologist'
+                    }
+                }
+            },
+            'nose': {
+                'value': 'Нос',
+                'symptoms': {
+                    'rhinitis': {
+                        'value': 'Насморк',
+                        'doctor': 'therapist'
+                    },
+                    'blood': {
+                        'value': 'Кровь',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'nasal_congestion': {
+                        'value': 'Заложенность носа',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'reduced_sense_of_smell': {
+                        'value': 'Снижение обоняния',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'itch': {
+                        'value': 'Зуд',
+                        'doctor': 'dermatologist'
+                    },
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'pus': {
+                        'value': 'Гной',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'red_sore_around_nose': {
+                        'value': 'Красное воспаление вокруг носа',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'neck': {
+                'value': 'Шея',
+                'symptoms': {
+                    'weakness_in_neck_muscles': {
+                        'value': 'Слабость в мышцах шеи',
+                        'doctor': 'neurologist'
+                    },
+                    'lymph_node_enlargement': {
+                        'value': 'Увеличение  лимфоузлов',
+                        'doctor': 'therapist'
+                    },
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'neurologist'
+                    }
+                }
+            },
+            'throat': {
+                'value': 'Горло',
+                'symptoms': {
+                    'nausea': {
+                        'value': 'Тошнота',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'cough': {
+                        'value': 'Кашель',
+                        'doctor': 'therapist'
+                    },
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'therapist'
+                    },
+                    'asthma': {
+                        'value': 'Приступ удушья',
+                        'doctor': 'therapist'
+                    },
+                    'dry_throat': {
+                        'value': 'Сухость в горле',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'continuous_sneezing': {
+                        'value': 'Непрерывное чихание',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'patches': {
+                        'value': 'Пятна',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'irritation': {
+                        'value': 'Раздражение',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'phlegm': {
+                        'value': 'Мокрота',
+                        'doctor': 'otolaryngologist'
+                    }
+                }
+            }
+        }
+    },
+    'body': {
+        'value': 'Туловище',
+        'parts': {
+            'chest': {
+                'value': 'Грудная клетка',
+                'symptoms': {
+                    'nausea': {
+                        'value': 'Тошнота',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'difficulty_breathing': {
+                        'value': 'Затруднение дыхания',
+                        'doctor': 'therapist'
+                    },
+                    'cough': {
+                        'value': 'Кашель',
+                        'doctor': 'therapist'
+                    },
+                    'chest_pain': {
+                        'value': 'Боль в груди',
+                        'doctor': 'therapist'
+                    },
+                    'heart_problems': {
+                        'value': 'Проблема с сердцем',
+                        'doctor': 'therapist'
+                    }
+                }
+            },
+            'spine': {
+                'value': 'Позвоночник',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'orthopedist'
+                    },
+                    'limitation_of_mobility': {
+                        'value': 'Ограничение подвижности',
+                        'doctor': 'orthopedist'
+                    }
+                }
+            },
+            'stomach': {
+                'value': 'Живот',
+                'symptoms': {
+                    'stomach_pain': {
+                        'value': 'Боль в желудке',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'abdominal_pain': {
+                        'value': 'Боль в прессе',
+                        'doctor': 'therapist'
+                    },
+                    'belly_pain': {
+                        'value': 'Боль в животе',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'diarrhea': {
+                        'value': 'Понос',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'nausea': {
+                        'value': 'Тошнота',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'hernia': {
+                        'value': 'Грыжа',
+                        'doctor': 'therapist'
+                    },
+                    'muscle_spasm': {
+                        'value': 'Спазм мышц',
+                        'doctor': 'therapist'
+                    },
+                    'lower_abdominal_pain': {
+                        'value': 'Боль внизу живота',
+                        'doctor': 'therapist'
+                    },
+                    'cramp': {
+                        'value': 'Колики',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'swelling': {
+                        'value': 'Вздутие',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'acidity': {
+                        'value': 'Кислотность',
+                        'doctor': 'gastroenterologist'
+                    }
+                }
+            },
+            'groin': {
+                'value': 'Пах',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'urogynecologist'
+                    },
+                    'problems_with_urination': {
+                        'value': 'Проблема с мочеиспусканием',
+                        'doctor': 'urogynecologist'
+                    },
+                    'itch': {
+                        'value': 'Зуд',
+                        'doctor': 'dermatologist'
+                    },
+                    'burning': {
+                        'value': 'Жжение',
+                        'doctor': 'urogynecologist'
+                    },
+                    'problem_with_sexual_organs': {
+                        'value': 'Проблема с половыми органами',
+                        'doctor': 'urogynecologist'
+                    },
+                    'bladder_discomfort': {
+                        'value': 'Дискомфорт мочевого пузыря',
+                        'doctor': 'urogynecologist'
+                    },
+                    'unpleasant_smell_of_urine': {
+                        'value': 'Неприятный запах мочи',
+                        'doctor': 'urogynecologist'
+                    },
+                    'continuous_sensation_of_urine': {
+                        'value': 'Непрерывное ощущение мочи',
+                        'doctor': 'urogynecologist'
+                    }
+                }
+            }
+        }
+    },
+    'arms': {
+        'value': 'Руки',
+        'parts': {
+            'whole_arm': {
+                'value': 'Рука полностью',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'traumatologist'
+                    },
+                    'muscular_weakness': {
+                        'value': 'Мышечная слабость',
+                        'doctor': 'endocrinologist'
+                    },
+                    'numbness': {
+                        'value': 'Онемение',
+                        'doctor': 'therapist'
+                    },
+                    'shake': {
+                        'value': 'Дрожание',
+                        'doctor': 'psychiatrist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'therapist'
+                    }
+                }
+            },
+            'shoulder': {
+                'value': 'Плечо',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'traumatologist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'therapist'
+                    },
+                    'limited_mobility': {
+                        'value': 'Ограничение подвижности',
+                        'doctor': 'orthopedist'
+                    }
+                }
+            },
+            'cubit': {
+                'value': 'Локоть',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'traumatologist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'therapist'
+                    },
+                    'limited_mobility': {
+                        'value': 'Ограничение подвижности',
+                        'doctor': 'orthopedist'
+                    }
+                }
+            },
+            'forearm': {
+                'value': 'Предплечье',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'traumatologist'
+                    },
+                    'numbness': {
+                        'value': 'Онемение',
+                        'doctor': 'therapist'
+                    },
+                    'muscle_stiffness': {
+                        'value': 'Скованность мышц',
+                        'doctor': 'orthopedist'
+                    },
+                    'convulsions': {
+                        'value': 'Судороги',
+                        'doctor': 'therapist'
+                    }
+                }
+            },
+            'hand': {
+                'value': 'Кисть',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'traumatologist'
+                    },
+                    'numbness': {
+                        'value': 'Онемение',
+                        'doctor': 'therapist'
+                    },
+                    'shake': {
+                        'value': 'Дрожание',
+                        'doctor': 'psychiatrist'
+                    },
+                    'burning': {
+                        'value': 'Жжение',
+                        'doctor': 'traumatologist'
+                    },
+                    'limited_mobility': {
+                        'value': 'Ограничение подвижности',
+                        'doctor': 'orthopedist'
+                    },
+                    'brittleness_of_nails': {
+                        'value': 'Ломкость ногтей',
+                        'doctor': 'dermatologist'
+                    },
+                    'inflammatory_nails': {
+                        'value': 'Воспаленные ногти',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            }
+        }
+    },
+    'legs': {
+        'value': 'Ноги',
+        'parts': {
+            'whole_leg': {
+                'value': 'Ноги полностью',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'traumatologist'
+                    },
+                    'muscular_weakness': {
+                        'value': 'Мышечная слабость',
+                        'doctor': 'endocrinologist'
+                    },
+                    'gait_disturbance': {
+                        'value': 'Нарушение походки',
+                        'doctor': 'orthopedist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'therapist'
+                    },
+                    'numbness': {
+                        'value': 'Онемение',
+                        'doctor': 'therapist'
+                    },
+                    'itch': {
+                        'value': 'Зуд',
+                        'doctor': 'dermatologist'
+                    },
+                    'shake': {
+                        'value': 'Дрожание',
+                        'doctor': 'psychiatrist'
+                    },
+                    'painful_walking': {
+                        'value': 'Болезненная ходьба',
+                        'doctor': 'orthopedist'
+                    }
+                }
+            },
+            'hips': {
+                'value': 'Бедра',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'traumatologist'
+                    },
+                    'numbness': {
+                        'value': 'Онемение',
+                        'doctor': 'therapist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'therapist'
+                    },
+                    'redness': {
+                        'value': 'Покраснение',
+                        'doctor': 'dermatologist'
+                    },
+                    'limited_mobility': {
+                        'value': 'Ограничение подвижности',
+                        'doctor': 'orthopedist'
+                    }
+                }
+            },
+            'knees': {
+                'value': 'Колени',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'traumatologist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'therapist'
+                    },
+                    'limited_mobility': {
+                        'value': 'Ограничение подвижности',
+                        'doctor': 'orthopedist'
+                    },
+                    'crunch': {
+                        'value': 'Хруст',
+                        'doctor': 'orthopedist'
+                    },
+                    'redness': {
+                        'value': 'Покраснение',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'shins': {
+                'value': 'Голени',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'orthopedist'
+                    },
+                    'burning': {
+                        'value': 'Жжение',
+                        'doctor': 'dermatologist'
+                    },
+                    'numbness': {
+                        'value': 'Онемение',
+                        'doctor': 'therapist'
+                    }
+                }
+            },
+            'ankle': {
+                'value': 'Лодыжки',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'traumatologist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'therapist'
+                    },
+                    'crunch': {
+                        'value': 'Хруст',
+                        'doctor': 'orthopedist'
+                    },
+                    'redness': {
+                        'value': 'Покраснение',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'feet': {
+                'value': 'Стопы',
+                'symptoms': {
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'traumatologist'
+                    },
+                    'edema': {
+                        'value': 'Отек',
+                        'doctor': 'therapist'
+                    },
+                    'numbness': {
+                        'value': 'Онемение',
+                        'doctor': 'therapist'
+                    },
+                    'itch': {
+                        'value': 'Зуд',
+                        'doctor': 'dermatologist'
+                    },
+                    'burning': {
+                        'value': 'Жжение',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            }
+        }
+    },
+    'other': {
+        'value': 'Прочее',
+        'parts': {
+            'skin': {
+                'value': 'Кожа',
+                'symptoms': {
+                    'skin_problem': {
+                        'value': 'Проблема с кожей',
+                        'doctor': 'dermatologist'
+                    },
+                    'increased_perspiration': {
+                        'value': 'Повышенное потоотделение',
+                        'doctor': 'dermatologist'
+                    },
+                    'itch': {
+                        'value': 'Зуд',
+                        'doctor': 'dermatologist'
+                    },
+                    'puffiness': {
+                        'value': 'Отечность',
+                        'doctor': 'dermatologist'
+                    },
+                    'hypersensitivity': {
+                        'value': 'Повышенная чувствительность',
+                        'doctor': 'dermatologist'
+                    },
+                    'pain': {
+                        'value': 'Боль',
+                        'doctor': 'dermatologist'
+                    },
+                    'blister': {
+                        'value': 'Волдырь',
+                        'doctor': 'dermatologist'
+                    },
+                    'rash': {
+                        'value': 'Сыпь',
+                        'doctor': 'dermatologist'
+                    },
+                    'nodular_lesions': {
+                        'value': 'Узелковые высыпания',
+                        'doctor': 'dermatologist'
+                    },
+                    'bruises': {
+                        'value': 'Кровоподтеки',
+                        'doctor': 'dermatologist'
+                    },
+                    'red_spots': {
+                        'value': 'Красные пятна по всему телу',
+                        'doctor': 'dermatologist'
+                    },
+                    'inflamed_nails': {
+                        'value': 'Воспаленные ногти',
+                        'doctor': 'dermatologist'
+                    },
+                    'skin_peeling': {
+                        'value': 'Шелушение кожи',
+                        'doctor': 'dermatologist'
+                    },
+                    'acne': {
+                        'value': 'Угревая сыпь',
+                        'doctor': 'dermatologist'
+                    },
+                    'purulent_pimples': {
+                        'value': 'Гнойные прыщи',
+                        'doctor': 'dermatologist'
+                    },
+                    'yellowish_skin': {
+                        'value': 'Желтая кожа',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'hair': {
+                'value': 'Волосы',
+                'symptoms': {
+                    'hair_loss': {
+                        'value': 'Выпадение волос',
+                        'doctor': 'dermatologist'
+                    },
+                    'eyebrow_alopecia': {
+                        'value': 'Выпадение бровей',
+                        'doctor': 'dermatologist'
+                    },
+                    'gluing_eyelashes': {
+                        'value': 'Склеивание ресниц',
+                        'doctor': 'dermatologist'
+                    }
+                }
+            },
+            'general_state': {
+                'value': 'Общее состояние',
+                'symptoms': {
+                    'nausea': {
+                        'value': 'Тошнота',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'vomiting': {
+                        'value': 'Рвота',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'difficulty_breathing': {
+                        'value': 'Затруднение дыхания',
+                        'doctor': 'therapist'
+                    },
+                    'cough': {
+                        'value': 'Кашель',
+                        'doctor': 'therapist'
+                    },
+                    'sleep_disorder': {
+                        'value': 'Расстройство сна',
+                        'doctor': 'neurologist'
+                    },
+                    'diarrhea': {
+                        'value': 'Понос',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'constipation': {
+                        'value': 'Запор',
+                        'doctor': 'gastroenterologist'
+                    },
+                    'faint': {
+                        'value': 'Обморок',
+                        'doctor': 'neurologist'
+                    },
+                    'elevated_temperature': {
+                        'value': 'Повышенная температура',
+                        'doctor': 'therapist'
+                    },
+                    'weakness': {
+                        'value': 'Слабость',
+                        'doctor': 'therapist'
+                    },
+                    'weight_gain': {
+                        'value': 'Повышение массы тела',
+                        'doctor': 'nutritionist'
+                    },
+                    'weight_loss': {
+                        'value': 'Снижение массы тела',
+                        'doctor': 'nutritionist'
+                    },
+                    'pressure': {
+                        'value': 'Давление',
+                        'doctor': 'therapist'
+                    },
+                    'continuous_sneezing': {
+                        'value': 'Непрерывное чихание',
+                        'doctor': 'otolaryngologist'
+                    },
+                    'obesity': {
+                        'value': 'Ожирение',
+                        'doctor': 'nutritionist'
+                    },
+                    'excessive_hunger': {
+                        'value': 'Чрезмерный голод',
+                        'doctor': 'nutritionist'
+                    },
+                    'muscle_stiffness': {
+                        'value': 'Жесткость мышц',
+                        'doctor': 'traumatologist'
+                    },
+                    'loss_of_balance': {
+                        'value': 'Потеря равновесия',
+                        'doctor': 'orthopedist'
+                    },
+                    'instability': {
+                        'value': 'Неустойчивость',
+                        'doctor': 'orthopedist'
+                    },
+                    'internal_itching': {
+                        'value': 'Внутренний зуд',
+                        'doctor': 'neurologist'
+                    },
+                    'depression': {
+                        'value': 'Депрессия',
+                        'doctor': 'psychotherapist'
+                    },
+                    'irritability': {
+                        'value': 'Раздражительность',
+                        'doctor': 'psychotherapist'
+                    },
+                    'mood_swings': {
+                        'value': 'Перепады настроения',
+                        'doctor': 'psychotherapist'
+                    },
+                    'restlessness': {
+                        'value': 'Неугомонность',
+                        'doctor': 'psychotherapist'
+                    },
+                    'lethargy': {
+                        'value': 'Вялость',
+                        'doctor': 'therapist'
+                    },
+                    'pain_in_muscles': {
+                        'value': 'Боль в мышцах',
+                        'doctor': 'orthopedist'
+                    },
+                    'increased_appetite': {
+                        'value': 'Повышенный аппетит',
+                        'doctor': 'nutritionist'
+                    },
+                    'loss_of_appetite': {
+                        'value': 'Потеря аппетита',
+                        'doctor': 'nutritionist'
+                    },
+                    'lack_of_concentration': {
+                        'value': 'Отсутствие концентрации',
+                        'doctor': 'neurologist'
+                    },
+                    'heart_palpitation': {
+                        'value': 'Учащенное сердцебиение',
+                        'doctor': 'therapist'
+                    },
+                    'chills': {
+                        'value': 'Озноб',
+                        'doctor': 'therapist'
+                    },
+                    'muscle_wasting': {
+                        'value': 'Атрофия мышц',
+                        'doctor': 'orthopedist'
+                    },
+                    'fatigue': {
+                        'value': 'Усталость',
+                        'doctor': 'therapist'
+                    },
+                    'anxiety': {
+                        'value': 'Тревожность',
+                        'doctor': 'psychotherapist'
+                    },
+                    'cold_limbs': {
+                        'value': 'Холодные конечности',
+                        'doctor': 'endocrinologist'
+                    },
+                    'breathlessness': {
+                        'value': 'Одышка',
+                        'doctor': 'therapist'
+                    },
+                    'dehydration': {
+                        'value': 'Обезвоживание',
+                        'doctor': 'endocrinologist'
+                    },
+                    'malaise': {
+                        'value': 'Недомогание',
+                        'doctor': 'therapist'
+                    },
+                    'mild_fever': {
+                        'value': 'Слабая лихорадка',
+                        'doctor': 'therapist'
+                    }
+                }
+            }
+        }
+    }
+}

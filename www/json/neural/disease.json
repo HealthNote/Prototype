@@ -1,0 +1,879 @@
+const disease = {
+    "paroymsal_positional_vertigo": {
+        "id": "0",
+        "doctor": "neurologist"
+    },
+    "aids": {
+        "id": "1",
+        "doctor": "allergist"
+    },
+    "acne": {
+        "id": "2",
+        "doctor": "dermatologist"
+    },
+    "alcoholic_hepatitis": {
+        "id": "3",
+        "doctor": "gastroenterologist"
+    },
+    "allergy": {
+        "id": "4",
+        "doctor": "allergist"
+    },
+    "arthritis": {
+        "id": "5",
+        "doctor": "orthopedist"
+    },
+    "bronchial_asthma": {
+        "id": "6",
+        "doctor": "pulmonologist"
+    },
+    "cervical_spondylosis": {
+        "id": "7",
+        "doctor": "orthopedist"
+    },
+    "chicken_pox": {
+        "id": "8",
+        "doctor": "pediatrician"
+    },
+    "chronic_cholestasis": {
+        "id": "9",
+        "doctor": "gastroenterologist"
+    },
+    "common_cold": {
+        "id": "10",
+        "doctor": "pediatrician"
+    },
+    "dengue": {
+        "id": "11",
+        "doctor": "therapist"
+    },
+    "diabetes": {
+        "id": "12",
+        "doctor": "endocrinologist"
+    },
+    "dimorphic_hemmorhoids": {
+        "id": "13",
+        "doctor": "urogynecologist"
+    },
+    "drug_reaction": {
+        "id": "14",
+        "doctor": "allergist"
+    },
+    "fungal_infection": {
+        "id": "15",
+        "doctor": "dermatologist"
+    },
+    "gerd": {
+        "id": "16",
+        "doctor": "gastroenterologist"
+    },
+    "gastroenteritis": {
+        "id": "17",
+        "doctor": "gastroenterologist"
+    },
+    "heart_attack": {
+        "id": "18",
+        "doctor": "cardiologist"
+    },
+    "hepatitis_b": {
+        "id": "19",
+        "doctor": "hepatologist"
+    },
+    "hepatitis_c": {
+        "id": "20",
+        "doctor": "hepatologist"
+    },
+    "hepatitis_d": {
+        "id": "21",
+        "doctor": "hepatologist"
+    },
+    "hepatitis_e": {
+        "id": "22",
+        "doctor": "hepatologist"
+    },
+    "hypertension_": {
+        "id": "23",
+        "doctor": "cardiologist"
+    },
+    "hyperthyroidism": {
+        "id": "24",
+        "doctor": "endocrinologist"
+    },
+    "hypoglycemia": {
+        "id": "25",
+        "doctor": "therapist"
+    },
+    "hypothyroidism": {
+        "id": "26",
+        "doctor": "endocrinologist"
+    },
+    "impetigo": {
+        "id": "27",
+        "doctor": "dermatologist"
+    },
+    "jaundice": {
+        "id": "28",
+        "doctor": "gastroenterologist"
+    },
+    "malaria": {
+        "id": "29",
+        "doctor": "therapist"
+    },
+    "migraine": {
+        "id": "30",
+        "doctor": "therapist"
+    },
+    "osteoarthristis": {
+        "id": "31",
+        "doctor": "orthopedist"
+    },
+    "paralysis": {
+        "id": "32",
+        "doctor": "neurologist"
+    },
+    "peptic_ulcer_diseae": {
+        "id": "33",
+        "doctor": "gastroenterologist"
+    },
+    "pneumonia": {
+        "id": "34",
+        "doctor": "therapist"
+    },
+    "psoriasis": {
+        "id": "35",
+        "doctor": "endocrinologist"
+    },
+    "tuberculosis": {
+        "id": "36",
+        "doctor": "pediatrician"
+    },
+    "typhoid": {
+        "id": "37",
+        "doctor": "infectiologist"
+    },
+    "urinary_tract_infection": {
+        "id": "38",
+        "doctor": "urogynecologist"
+    },
+    "varicose_veins": {
+        "id": "39",
+        "doctor": "surgeon"
+    },
+    "hepatitis_a": {
+        "id": "40",
+        "doctor": "hepatologist"
+    }
+}
+
+const symptoms_for_disease = {
+    "itching": {
+        "id": "0",
+        "part": [],
+        "symptom": [
+            "itch"
+        ]
+    },
+    "skin_rash": {
+        "id": "1",
+        "part": [
+            "skin"
+        ],
+        "symptom": [
+            "rash"
+        ]
+    },
+    "nodal_skin_eruptions": {
+        "id": "2",
+        "part": [
+            "skin"
+        ],
+        "symptom": [
+            "nodular_lesions"
+        ]
+    },
+    "continuous_sneezing": {
+        "id": "3",
+        "part": [],
+        "symptom": [
+            "continuous_sneezing"
+        ]
+    },
+    "shivering": {
+        "id": "4",
+        "part": [
+            "whole_arm",
+            "hand",
+            "whole_leg"
+        ],
+        "symptom": [
+            "shake"
+        ]
+    },
+    "chills": {
+        "id": "5",
+        "part": [],
+        "symptom": [
+            "chills"
+        ]
+    },
+    "joint_pain": {
+        "id": "6",
+        "part": [
+            "whole_arm",
+            "shoulder",
+            "cubit",
+            "hand",
+            "whole_leg",
+            "knees",
+            "feet"
+        ],
+        "symptom": [
+            "pain"
+        ]
+    },
+    "stomach_pain": {
+        "id": "7",
+        "part": [],
+        "symptom": [
+            "stomach_pain"
+        ]
+    },
+    "acidity": {
+        "id": "8",
+        "part": [
+            "stomach"
+        ],
+        "symptom": [
+            "acidity"
+        ]
+    },
+    "ulcers_on_tongue": {
+        "id": "9",
+        "part": [
+            "tongue"
+        ],
+        "symptom": [
+            "ulcers"
+        ]
+    },
+    "muscle_wasting": {
+        "id": "10",
+        "part": [],
+        "symptom": [
+            "muscle_wasting"
+        ]
+    },
+    "vomiting": {
+        "id": "11",
+        "part": [],
+        "symptom": [
+            "vomiting"
+        ]
+    },
+    "fatigue": {
+        "id": "12",
+        "part": [],
+        "symptom": [
+            "fatigue"
+        ]
+    },
+    "weight_gain": {
+        "id": "13",
+        "part": [],
+        "symptom": [
+            "weight_gain"
+        ]
+    },
+    "anxiety": {
+        "id": "14",
+        "part": [],
+        "symptom": [
+            "anxiety"
+        ]
+    },
+    "cold_hands_and_feets": {
+        "id": "15",
+        "part": [],
+        "symptom": [
+            "cold_limbs"
+        ]
+    },
+    "mood_swings": {
+        "id": "16",
+        "part": [],
+        "symptom": [
+            "mood_swings"
+        ]
+    },
+    "weight_loss": {
+        "id": "17",
+        "part": [],
+        "symptom": [
+            "weight_loss"
+        ]
+    },
+    "restlessness": {
+        "id": "18",
+        "part": [],
+        "symptom": [
+            "restlessness"
+        ]
+    },
+    "lethargy": {
+        "id": "19",
+        "part": [],
+        "symptom": [
+            "lethargy"
+        ]
+    },
+    "patches_in_throat": {
+        "id": "20",
+        "part": [
+            "throat"
+        ],
+        "symptom": [
+            "patches"
+        ]
+    },
+    "cough": {
+        "id": "21",
+        "part": [],
+        "symptom": [
+            "cough"
+        ]
+    },
+    "high_fever": {
+        "id": "22",
+        "part": [],
+        "symptom": [
+            "elevated_temperature"
+        ]
+    },
+    "breathlessness": {
+        "id": "23",
+        "part": [],
+        "symptom": [
+            "breathlessness"
+        ]
+    },
+    "sweating": {
+        "id": "24",
+        "part": [],
+        "symptom": [
+            "increased_perspiration"
+        ]
+    },
+    "dehydration": {
+        "id": "25",
+        "part": [],
+        "symptom": [
+            "dehydration"
+        ]
+    },
+    "indigestion": {
+        "id": "26",
+        "part": [],
+        "symptom": [
+            "stomach_pain"
+        ]
+    },
+    "headache": {
+        "id": "27",
+        "part": [],
+        "symptom": [
+            "headache"
+        ]
+    },
+    "yellowish_skin": {
+        "id": "28",
+        "part": [],
+        "symptom": [
+            "yellowish_skin"
+        ]
+    },
+    "nausea": {
+        "id": "29",
+        "part": [],
+        "symptom": [
+            "nausea"
+        ]
+    },
+    "loss_of_appetite": {
+        "id": "30",
+        "part": [],
+        "symptom": [
+            "loss_of_appetite"
+        ]
+    },
+    "back_pain": {
+        "id": "31",
+        "part": [
+            "spine"
+        ],
+        "symptom": [
+            "pain"
+        ]
+    },
+    "constipation": {
+        "id": "32",
+        "part": [],
+        "symptom": [
+            "constipation"
+        ]
+    },
+    "abdominal_pain": {
+        "id": "33",
+        "part": [],
+        "symptom": [
+            "abdominal_pain"
+        ]
+    },
+    "diarrhoea": {
+        "id": "34",
+        "part": [],
+        "symptom": [
+            "diarrhea"
+        ]
+    },
+    "mild_fever": {
+        "id": "35",
+        "part": [],
+        "symptom": [
+            "mild_fever"
+        ]
+    },
+    "swelling_of_stomach": {
+        "id": "36",
+        "part": [
+            "stomach"
+        ],
+        "symptom": [
+            "swelling"
+        ]
+    },
+    "swelled_lymph_nodes": {
+        "id": "37",
+        "part": [],
+        "symptom": [
+            "lymph_node_enlargement"
+        ]
+    },
+    "malaise": {
+        "id": "38",
+        "part": [],
+        "symptom": [
+            "malaise"
+        ]
+    },
+    "blurred_and_distorted_vision": {
+        "id": "39",
+        "part": [],
+        "symptom": [
+            "visual_impairment"
+        ]
+    },
+    "phlegm": {
+        "id": "40",
+        "part": [
+            "throat"
+        ],
+        "symptom": [
+            "phlegm"
+        ]
+    },
+    "throat_irritation": {
+        "id": "41",
+        "part": [
+            "throat"
+        ],
+        "symptom": [
+            "irritation"
+        ]
+    },
+    "redness_of_eyes": {
+        "id": "42",
+        "part": [
+            "eyes"
+        ],
+        "symptom": [
+            "redness"
+        ]
+    },
+    "runny_nose": {
+        "id": "43",
+        "part": [],
+        "symptom": [
+            "rhinitis"
+        ]
+    },
+    "congestion": {
+        "id": "44",
+        "part": [],
+        "symptom": [
+            "nasal_congestion"
+        ]
+    },
+    "chest_pain": {
+        "id": "45",
+        "part": [],
+        "symptom": [
+            "chest_pain"
+        ]
+    },
+    "weakness_in_limbs": {
+        "id": "46",
+        "part": [
+            "general_state"
+        ],
+        "symptom": [
+            "weakness"
+        ]
+    },
+    "fast_heart_rate": {
+        "id": "47",
+        "part": [],
+        "symptom": [
+            "heart_palpitation"
+        ]
+    },
+    "neck_pain": {
+        "id": "48",
+        "part": [
+            "neck"
+        ],
+        "symptom": [
+            "pain"
+        ]
+    },
+    "dizziness": {
+        "id": "49",
+        "part": [],
+        "symptom": [
+            "dizziness"
+        ]
+    },
+    "cramps": {
+        "id": "50",
+        "part": [
+            "stomach"
+        ],
+        "symptom": [
+            "cramp"
+        ]
+    },
+    "bruising": {
+        "id": "51",
+        "part": [
+            "skin"
+        ],
+        "symptom": [
+            "bruises"
+        ]
+    },
+    "obesity": {
+        "id": "52",
+        "part": [],
+        "symptom": [
+            "obesity"
+        ]
+    },
+    "swollen_legs": {
+        "id": "53",
+        "part": [
+            "feet",
+            "ankle",
+            "knees",
+            "hips",
+            "whole_leg"
+        ],
+        "symptom": [
+            "edema"
+        ]
+    },
+    "brittle_nails": {
+        "id": "54",
+        "part": [],
+        "symptom": [
+            "brittleness_of_nails"
+        ]
+    },
+    "swollen_extremeties": {
+        "id": "55",
+        "part": [
+            "whole_arm",
+            "feet"
+        ],
+        "symptom": [
+            "edema"
+        ]
+    },
+    "excessive_hunger": {
+        "id": "56",
+        "part": [],
+        "symptom": [
+            "excessive_hunger"
+        ]
+    },
+    "drying_and_tingling_lips": {
+        "id": "57",
+        "part": [
+            "mouth"
+        ],
+        "symptom": [
+            "dryness_and_tingling_lips"
+        ]
+    },
+    "slurred_speech": {
+        "id": "58",
+        "part": [],
+        "symptom": [
+            "speech_disorder"
+        ]
+    },
+    "knee_pain": {
+        "id": "59",
+        "part": [
+            "knees"
+        ],
+        "symptom": [
+            "pain"
+        ]
+    },
+    "hip_joint_pain": {
+        "id": "60",
+        "part": [
+            "hips"
+        ],
+        "symptom": [
+            "pain"
+        ]
+    },
+    "muscle_weakness": {
+        "id": "61",
+        "part": [],
+        "symptom": [
+            "weakness_in_neck_muscles",
+            "muscular_weakness"
+        ]
+    },
+    "swelling_joints": {
+        "id": "62",
+        "part": [
+            "whole_arm",
+            "shoulder",
+            "cubit",
+            "hand",
+            "whole_leg",
+            "knees",
+            "feet"
+        ],
+        "symptom": [
+            "edema"
+        ]
+    },
+    "movement_stiffness": {
+        "id": "63",
+        "part": [],
+        "symptom": [
+            "muscle_stiffness"
+        ]
+    },
+    "loss_of_balance": {
+        "id": "64",
+        "part": [],
+        "symptom": [
+            "loss_of_balance"
+        ]
+    },
+    "unsteadiness": {
+        "id": "65",
+        "part": [],
+        "symptom": [
+            "instability"
+        ]
+    },
+    "loss_of_smell": {
+        "id": "66",
+        "part": [],
+        "symptom": [
+            "reduced_sense_of_smell"
+        ]
+    },
+    "bladder_discomfort": {
+        "id": "67",
+        "part": [],
+        "symptom": [
+            "bladder_discomfort"
+        ]
+    },
+    "foul_smell_of urine": {
+        "id": "68",
+        "part": [],
+        "symptom": [
+            "unpleasant_smell_of_urine"
+        ]
+    },
+    "continuous_feel_of_urine": {
+        "id": "69",
+        "part": [],
+        "symptom": [
+            "continuous_sensation_of_urine"
+        ]
+    },
+    "internal_itching": {
+        "id": "70",
+        "part": [],
+        "symptom": [
+            "internal_itching"
+        ]
+    },
+    "depression": {
+        "id": "71",
+        "part": [],
+        "symptom": [
+            "depression"
+        ]
+    },
+    "irritability": {
+        "id": "72",
+        "part": [],
+        "symptom": [
+            "irritability"
+        ]
+    },
+    "muscle_pain": {
+        "id": "73",
+        "part": [],
+        "symptom": [
+            "pain_in_muscles"
+        ]
+    },
+    "altered_sensorium": {
+        "id": "74",
+        "part": [],
+        "symptom": [
+            "hallucinations"
+        ]
+    },
+    "red_spots_over_body": {
+        "id": "75",
+        "part": [],
+        "symptom": [
+            "red_spots"
+        ]
+    },
+    "belly_pain": {
+        "id": "76",
+        "part": [],
+        "symptom": [
+            "belly_pain"
+        ]
+    },
+    "watering_from_eyes": {
+        "id": "77",
+        "part": [],
+        "symptom": [
+            "watering_from_eyes"
+        ]
+    },
+    "increased_appetite": {
+        "id": "78",
+        "part": [],
+        "symptom": [
+            "increased_appetite"
+        ]
+    },
+    "mucoid_sputum": {
+        "id": "79",
+        "part": [],
+        "symptom": [
+            "mucous_sputum"
+        ]
+    },
+    "rusty_sputum": {
+        "id": "80",
+        "part": [],
+        "symptom": [
+            "rusty_sputum"
+        ]
+    },
+    "lack_of_concentration": {
+        "id": "81",
+        "part": [],
+        "symptom": [
+            "lack_of_concentration"
+        ]
+    },
+    "visual_disturbances": {
+        "id": "82",
+        "part": [
+            "eyes"
+        ],
+        "symptom": [
+            "visual_impairment"
+        ]
+    },
+    "distention_of_abdomen": {
+        "id": "83",
+        "part": [],
+        "symptom": [
+            "swelling"
+        ]
+    },
+    "blood_in_sputum": {
+        "id": "84",
+        "part": [],
+        "symptom": [
+            "blood_in_sputum"
+        ]
+    },
+    "palpitations": {
+        "id": "85",
+        "part": [],
+        "symptom": [
+            "heart_palpitation"
+        ]
+    },
+    "painful_walking": {
+        "id": "86",
+        "part": [],
+        "symptom": [
+            "painful_walking"
+        ]
+    },
+    "pus_filled_pimples": {
+        "id": "87",
+        "part": [],
+        "symptom": [
+            "purulent_pimples"
+        ]
+    },
+    "blackheads": {
+        "id": "88",
+        "part": [],
+        "symptom": [
+            "acne"
+        ]
+    },
+    "skin_peeling": {
+        "id": "89",
+        "part": [],
+        "symptom": [
+            "skin_peeling"
+        ]
+    },
+    "inflammatory_nails": {
+        "id": "90",
+        "part": [],
+        "symptom": [
+            "inflammatory_nails"
+        ]
+    },
+    "red_sore_around_nose": {
+        "id": "91",
+        "part": [],
+        "symptom": [
+            "red_sore_around_nose"
+        ]
+    }
+}

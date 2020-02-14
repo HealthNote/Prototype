@@ -1,0 +1,559 @@
+@font-face {
+    font-family: "ComicSansMS";
+    src: url(../fonts/comic.ttf) format("truetype");
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "ComicSansMS", Arial;
+}
+body{
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 599px){
+  #page_header{
+    height: 60px;
+    font-size: 24px;
+    padding: 0px 16px;
+  }
+  .header_icon{
+    width: 32px;
+    height: 32px;
+  }
+  #add_icon{
+    margin-right: 16px;
+    border: 3px solid #ffffff;
+  }
+  .user_message{
+    margin: 16px;
+    padding: 10px 15px;
+    min-height: 200px;
+    font-size: 20px;
+  }
+  .tool_bar_options{
+    flex-direction: column;
+  }
+  .tool_bar_icon{
+    width: 32px;
+    height: 32px;
+  }
+  .note_box{
+    padding: 10px;
+  }
+  .note_box:first-of-type {
+    margin-top: 16px;
+  }
+  .main_page_note_header{
+    font-size: 20px;
+  }
+  .main_page_note_tags{
+    font-size: 12px;
+    padding: 1px 5px;
+    margin: 5px 5px 5px 0px;
+  }
+  .settings_gender_icon{
+    width: 96px;
+    height: 96px;
+    margin: 0px 12px;
+  }
+  #settings_lang select{
+    font-size: 16px;
+  }
+  .settings_button{
+    font-size: 16px;
+  }
+  .add_note_selects{
+    font-size: 15px;
+  }
+  #add_note_page_name{
+    font-size: 24px;
+  }
+  #add_note_header_input{
+    font-size: 16px;
+  }
+  .note_view_info{
+    font-size: 14px;
+  }
+  #view_note_active{
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 600px){
+  #page_header{
+    height: 96px;
+    font-size: 5vmin;
+    padding: 0px 24px;
+  }
+  .header_icon{
+    width: 64px;
+    height: 64px;
+  }
+  #add_icon{
+    margin-right: 32px;
+    border: 6px solid #ffffff;
+  }
+  .user_message{
+    margin: 32px;
+    padding: 20px;
+    min-height: 200px;
+    font-size: 4vmin;
+  }
+  .tool_bar_options{
+    flex-direction: row;
+  }
+  .tool_bar_icon{
+    width: 48px;
+    height: 48px;
+  }
+  .note_box{
+    padding: 10px 20px;
+  }
+  .note_box:first-of-type {
+    margin-top: 32px;
+  }
+  .main_page_note_header{
+    font-size: 3vmin;
+  }
+  .main_page_note_tags{
+    font-size: 2vmin;
+    padding: 2px 8px;
+    margin: 10px 10px 10px 0px;
+  }
+  .settings_gender_icon{
+    width: 128px;
+    height: 128px;
+    margin: 0px 16px;
+  }
+  #settings_lang select{
+    font-size: 2.5vmin;
+  }
+  .settings_button{
+    font-size: 2.5vmin;
+  }
+  .add_note_selects{
+    font-size: 2vmin;
+  }
+  #add_note_page_name{
+    font-size: 4vmin;
+  }
+  #add_note_header_input{
+    font-size: 2.5vmin;
+  }
+  .note_view_info{
+    font-size: 2vmin;
+  }
+  #view_note_active{
+    font-size: 2.5vmin;
+  }
+}
+
+.icon{
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* SPA template */
+#page_header{
+  background: #7ecccc;
+  width: 100%;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+}
+#app_logo{
+  cursor: pointer;
+}
+#app_logo:active{
+  text-shadow: 1px 1px 1px #bcbcbc, 0 0 5px #ffffff;
+}
+#icon_panel{
+  display: flex;
+  align-items: center;
+}
+.header_icon{
+  transition: all 0s ease-in-out 0s;
+}
+.header_icon:hover{
+  transition: all 0.3s ease-in-out 0s;
+}
+#add_icon:hover{
+  transform: rotate(90deg);
+}
+#gear_icon:hover{
+  transform: rotate(45deg);
+}
+#page_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: center;
+}
+
+/* User message */
+.user_message{
+  border: 1px dashed #d1d1d1;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #5f5f5f;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  overflow-x: hidden;
+  text-align: center;
+}
+.my_alert{
+  position: absolute;
+  bottom: 80px;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  margin: 0 10%;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #4a4a4a;
+  opacity: 0.9;
+  transition: .5s;
+}
+
+/* Main Page Template */
+.tool_bar{
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffffff;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+}
+#hidden_tool_bar{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: -40px;
+  background: #ffffff;
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #bababa;
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+#note_filter_select{
+  outline: none;
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+  padding: 2px 10px;
+  margin: 5px;
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+}
+#note_search_input{
+  padding: 5px 10px;
+  margin: 5px;
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+}
+.tool_bar_options{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0px;
+  width: 100%;
+  cursor: pointer;
+  border-left: 1px solid #bababa;
+  border-top: 1px solid #bababa;
+  flex-direction: column-reverse;
+}
+.tool_bar_options:first-of-type {
+  border-left: none;
+}
+.tool_bar_options:hover{
+  box-shadow: 0 0 1px 1px inset #bababa;
+}
+.tool_bar_text{
+  font-size: 14px;
+  font-weight: bold;
+  color: #7f7f7f;
+}
+.note_box{
+  background: #ffffff;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+.note_box:last-of-type {
+  margin-bottom: 80px;
+}
+.main_page_note_tags{
+  display: inline-block;
+  margin-bottom: 5px;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  background: #f6f6f6;
+  vertical-align: top;
+}
+
+#filter_icon{
+  width: 32px;
+  height: 32px;
+}
+
+/* Settings Page */
+#settings_gender{
+  margin: 8px 0px 32px 0px;
+}
+.settings_gender_icon{
+  border: 2px solid #cacaca;
+  transition: all 0.3s ease-in-out 0s;
+}
+.choosen_gender{
+  box-shadow: 0 0 5px 2px inset #cacaca;
+  border: 2px solid #cacaca;
+  transition: all 0.3s ease-in-out 0s;
+  filter: brightness(0.8);
+}
+#settings_lang{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 36px;
+}
+#settings_lang select{
+  width: 72px;
+  height: 40px;
+  outline: none;
+  border-radius: 10px;
+  margin: 0px 20px;
+  padding: 0px 5px;
+  color: #5f5f5f;
+  background: #f8f8f8;
+  border: 1px solid #cacaca;
+  transition: all 0.3s ease-in-out 0s;
+}
+#settings_lang select:hover{
+  background: #f3f3f3;
+  border: 1px solid #a5a5a5;
+  transition: all 0.3s ease-in-out 0s;
+}
+.settings_button{
+  background: #f3f3f3;
+  outline: none;
+  font-weight: bold;
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 8px 4px;
+  padding: 4px 14px;
+  color: #5f5f5f;
+  transition: all 0.3s ease-in-out 0s;
+}
+.settings_button:hover{
+  background: #e7e7e7;
+  color: #363636;
+  border: 1px solid #a5a5a5;
+  transition: all 0.3s ease-in-out 0s;
+}
+#settings_save_button{
+  margin-right: 10px;
+}
+.settings_icon{
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+
+/* Add Note Page */
+#new_note_form{
+  display: flex;
+  flex-direction: column;
+}
+.add_note_selects{
+  outline: none;
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+  padding: 2px 10px;
+  margin: 2px 0px;
+}
+.hidden{
+  display: none;
+}
+#add_note_page_name{
+  font-weight: bold;
+  margin: 8px 0px;
+}
+#add_note_header_input{
+  padding: 5px 10px;
+  margin: 8px 0px 12px;
+}
+#add_note_desc_textarea{
+  height: 100px;
+  font-size: 16px;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  margin: 12px 0px 8px;
+  padding: 5px 10px;
+  overflow: auto;
+  outline: none;
+  resize: none;
+}
+#doc_select_block{
+  font-size: 14px;
+}
+#select_doctor{
+  margin: 8px 0px;
+}
+#file_uploader_container{
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.new_note_icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #cacaca;
+  transition: all 0.3s ease-in-out 0s;
+}
+.new_note_icon:hover{
+    transition: all 0.3s ease-in-out 0s;
+    box-shadow: 0 0 5px 2px inset #cacaca;
+}
+.new_note_upload_button_div{
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+.new_note_hidden_input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+#new_note_hidden_image_input:hover ~ #photo_upload_img{
+  transition: all 0.3s ease-in-out 0s;
+  box-shadow: 0 0 5px 2px inset #cacaca;
+}
+#new_note_hidden_audio_input:hover ~ #voice_upload_img{
+  transition: all 0.3s ease-in-out 0s;
+  box-shadow: 0 0 5px 2px inset #cacaca;
+}
+.add_note_small_btn{
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* View Page */
+#note_view_header{
+
+}
+#note_view_tags{
+
+}
+.note_view_info{
+  text-align: left;
+}
+#note_view_desc{
+  text-align: justify;
+}
+.view_page_image{
+  max-width: 100%;
+  display: none;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+.view_page_audio{
+  margin-top: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  outline: none;
+  display: none;
+}
+#view_note_active{
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#note_active_checkbox {
+  display: none;
+}
+#note_active_checkbox + label {
+  position: relative;
+  padding: 0 0 0 48px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+#note_active_checkbox + label:before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+  transition: .2s;
+}
+#note_active_checkbox + label:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: .2s;
+}
+#note_active_checkbox:checked + label:before {
+  background: #7ecccc;
+}
+#note_active_checkbox:checked + label:after {
+  left: 26px;
+}
+
+/* Neural Network */
+#neural_desc{
+  font-size: 16px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+#neural_advice{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+#neural_warning{
+  font-size: 12px;
+  color: #aaaaaa;
+}

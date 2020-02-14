@@ -1,0 +1,109 @@
+const en_text = {
+  settings: {
+    lang: 'Language',
+    ok: 'Okey',
+    drop: 'Drop DataBase',
+    opt_en: 'Eng',
+    opt_ru: 'Rus',
+    confirm: 'Are you sure? You will delete all user data including notes and settings!',
+    dropped: 'All data has been deleted!',
+    save_alert: 'Settings have been saved!'
+  },
+  main: {
+    empty: 'Your notes will be here.',
+    filter: 'Filter',
+    search: 'Search',
+    display: 'Display',
+    analysis: 'Analysis',
+    only_actual: 'Only relevant',
+    neural: 'For more accurate recommendations, we analyzed all your symptoms using a neural network and compared the results with the most common diseases.',
+    advice: 'Based on this data, we recommend that you:',
+    warning: 'The accuracy of the prediction depends on the number of your records.',
+    insufficiently: 'Insufficient data for analysis'
+  },
+  newnote: {
+    page: 'Note creation',
+    header: 'Note header',
+    description: 'Describe symptoms',
+    area: 'Choose area',
+    part: 'Choose location',
+    symp: 'Choose symptom',
+    doctor: 'Possible doctor',
+    choose: 'Choose a doctor',
+    delete: 'Delete',
+    save: 'Save',
+    save_alert: 'Note has been saved!',
+    file_alert: 'Unable to determine file!',
+    urogynecologist: {
+      man: 'Urologist',
+      woman: 'Gynecologist'
+    }
+  },
+  view_note: {
+    active: 'Note is relevant',
+    save_alert: 'Data has been changed',
+    delete_alert: 'Data has been deleted',
+    delete_confirm: 'Confirm deletion',
+    save: 'Save',
+    delete: 'Delete',
+    date: 'Date',
+    doctor: 'Doctor',
+    desc: 'Description',
+    empty: 'No record available'
+  }
+}
+
+const ru_text = {
+  settings: {
+    lang: 'Язык',
+    ok: 'Окей',
+    drop: 'Удалить данные',
+    opt_en: 'Анг',
+    opt_ru: 'Рус',
+    confirm: 'Вы точно уверены? Система удалит все пользовательские данные, включая заметки и настройки!',
+    dropped: 'Все данные были удалены!',
+    save_alert: 'Настройки сохранены!'
+  },
+  main: {
+    empty: 'Тут будут ваши заметки',
+    filter: 'Фильтр',
+    search: 'Поиск',
+    display: 'Вид',
+    analysis: 'Анализ',
+    only_actual: 'Только актуальные',
+    neural: 'Для более точных рекомендаций мы проанализировали все ваши симптомы при помощи нейронной сети и сверили результаты с наиболее распространенными заболеваниями.',
+    advice: 'На основе этих данных мы рекомендуем вам:',
+    warning: 'Точность предсказания зависит от количества ваших записей.',
+    insufficiently: 'Недостаточно данных для анализа'
+  },
+  newnote: {
+    page: 'Создание заметки',
+    header: 'Заголовок заметки',
+    description: 'Опишите симптомы',
+    area: 'Выберите область',
+    part: 'Выберите место',
+    symp: 'Выберите симптом',
+    doctor: 'Возможный врач',
+    choose: 'Выберите врача',
+    delete: 'Удалить',
+    save: 'Сохранить',
+    save_alert: 'Заметка сохранена!',
+    file_alert: 'Не получается определить файл!',
+    urogynecologist: {
+      man: 'Уролог',
+      woman: 'Гинеколог'
+    }
+  },
+  view_note: {
+    active: 'Заметка актуальна',
+    save_alert: 'Данные были изменены',
+    delete_alert: 'Данные были удалены',
+    delete_confirm: 'Подтвердите удаление',
+    save: 'Сохранить',
+    delete: 'Удалить',
+    date: 'Дата',
+    doctor: 'Доктор',
+    desc: 'Описание',
+    empty: 'Запись отсутствует'
+  }
+};
